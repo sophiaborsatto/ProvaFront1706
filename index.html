@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciador de Empréstimos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Biblioteca Comunitária</h1>
+    <form id="form">
+      <label for="nome">Nome do leitor:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="livro">Título do livro:</label>
+      <input type="text" id="livro" name="livro" required />    
+
+      <label for="data">Data do empréstimo:</label>
+      <input type="date" id="data" name="data" required />
+
+      <label for="tipo">Tipo de leitor:</label>
+      <select id="tipo" name="tipo" required >
+        <option value="adulto">Adulto</option>
+        <option value="adolescente">Adolescente</option>
+        <option value="infantil">Infantil</option>
+      </select>
+
+      <input type="hidden" id="indexEditar">
+      
+      <button id="btnCadastrar">Registrar empréstimo</button>
+    </form>
+
+    <div class="tabela">
+        <table>
+            <thead> <!--cabeçalho da tabela-->
+                <tr> <!--linhas da tabela-->
+                    <th>Leitor</th>
+                    <th>Livro</th>
+                    <th>Tipo</th>
+                    <th>Empréstimo</th>
+                    <th>Devolução</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaUsuarios"> <!--corpo da tabela--> </tbody>
+        </table>
+    </div>
+
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
